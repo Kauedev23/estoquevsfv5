@@ -123,7 +123,9 @@
         async function initialAuthCheck() {
             console.log('Iniciando verificação de autenticação');
             showLoading();
+            console.log('Antes do getSession');
             const { data: { session }, error } = await supabase.auth.getSession();
+            console.log('Depois do getSession', session, error);
             hideLoading();
             if (error) {
                 console.error('Erro ao obter sessão:', error.message);
