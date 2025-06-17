@@ -1,0 +1,18 @@
+ /* Estilos personalizados para a aplicação */
+        body { font-family: 'Inter', sans-serif; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .chart-container {
+            position: relative;
+            height: 400px; /* Altura padrão para gráficos */
+            width: 100%;
+        }
+        /* Responsividade para desktop e mobile */
+        @media (max-width: 768px) {
+            .mobile-only { display: block !important; }
+            .desktop-only { display: none !important; }
+        }
+        @media (min-width: 769px) {
+            .mobile-only { display: none !important; }
+            .desktop-only { display: block !important; }
+        }
