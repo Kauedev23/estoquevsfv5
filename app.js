@@ -1,4 +1,4 @@
- // Configuração do Supabase - SUBSTITUA PELAS SUAS CREDENCIAIS DO PROJETO SUPABASE
+// Configuração do Supabase - SUBSTITUA PELAS SUAS CREDENCIAIS DO PROJETO SUPABASE
         const SUPABASE_URL = 'https://jljiwewobojdkkbrhlow.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impsaml3ZXdvYm9qZGtrYnJobG93Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAxODYxNTQsImV4cCI6MjA2NTc2MjE1NH0.ct8D0jzWSvbIB_oPMVhSn2zW9gTKmPYzc1fIf_IrcAo';
         const supabase = window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
@@ -121,6 +121,7 @@
          * Verifica o estado inicial de autenticação ao carregar a página.
          */
         async function initialAuthCheck() {
+            console.log('Iniciando verificação de autenticação');
             showLoading();
             const { data: { session }, error } = await supabase.auth.getSession();
             hideLoading();
@@ -141,6 +142,7 @@
             } else {
                 renderAuthPage(); // Se não houver sessão, mostra a página de login
             }
+            console.log('Finalizou verificação de autenticação');
         }
 
         /**
@@ -1154,4 +1156,3 @@
             // Inicia a verificação de autenticação
             initialAuthCheck();
         });
-    
