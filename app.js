@@ -194,7 +194,7 @@
 
             const tabs = [
                 { id: 'dashboard-tab', label: 'Dashboard', roles: ['admin', 'operacional'] },
-                { id: 'inventory-tab', label: 'Estoque', roles: ['admin', 'operacional'] },
+                { id: 'inventory-tab', label: 'Estoque', roles: ['admin',] },
                 { id: 'consume-tab', label: 'Consumir', roles: ['admin', 'operacional'] },
                 { id: 'add-item-tab', label: 'Adicionar Item', roles: ['admin'] },
                 { id: 'report-tab', label: 'Relatório', roles: ['admin'] },
