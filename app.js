@@ -12,7 +12,7 @@
             topConsumedItems: [], // Itens mais consumidos
             stockStatusData: {}, // Dados para o gráfico de status do estoque
             currentTab: 'dashboard-tab', // Aba atualmente ativa
-            loading: false, // Estado de carregamento
+            loading: true, // Estado de carregamento
             // Filtros da página de estoque
             inventorySearchTerm: '',
             inventoryFilterStatus: 'all',
